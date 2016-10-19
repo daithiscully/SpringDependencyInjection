@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--Triangle uses the constructor, if only one  constructor-arg tag is used, the constructor with 1 arg is called.
+    If you want to call a constructor which takes two parameters, you will use two constructor-arg tags-->
+    <bean id="triangle" class="spring.Triangle">
+        <constructor-arg index="0" type="java.lang.String" value="Isosceles"/>
+        <constructor-arg index="1" type="int" value="20"/>
+    </bean>
+
+    <!--The Circle uses the setter for passing the 'property' value-->
+    <bean id="circle" class="spring.Circle">
+        <property name="radius" value="12.05"/>
+    </bean>
+</beans>
